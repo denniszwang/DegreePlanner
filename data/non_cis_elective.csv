@@ -1,0 +1,157 @@
+Department Code,Course Number,Course Name,Restriction
+BE,5160,Introduction to High-Performance Scientific Computing,0
+BE,5210,Brain Computer Interfacing,0
+BE,5300,Theoretical Neuroscience,0
+BE,5670,Modeling Biological Systems,0
+BMIN,5220,AI III: Advanced Methods & Health Applications in Machine Learning,2
+CRIM,5020,Criminal Justice Analytics,0
+EAS,5000,Technical Communication in Engineering Practice,1
+EAS,5070,Intellectual Property & Business Law for Engineers,0
+EAS,5100,Technical Communication & Academic Writing For Engineers,1
+EAS,5120,Engineering Negotiation,1
+EAS,5450,Engineering Entrepreneurship I,1
+EAS,5460,Engineering Entrepreneurship II,1
+EAS,5900,Commercializing Software,1
+EAS,5950,Foundations of Leadership,1
+ECON,6810,Microeconomic Theory I,0
+ECON,6820,Game Theory & Applications,0
+ECON,7010,Microeconomic Theory,0
+ECON,7030,Microeconomic Theory II,0
+ECON,7130,Game Theory,0
+EDUC,5420,Video Games & Virtual Worlds,0
+EDUC,5450,Core Methods in Educational Data Mining,0
+EDUC,5520,Video Games and Virtual Worlds as Sites for Learning,0
+EDUC,5770,Selected Topics in Educational Linguistics,0
+EDUC,6150,Technologies for Language Learning and Teaching,0
+EDUC,6770,Information & Community Technology for Education & Development,1
+ENM,5020,Numerical Methods & Modeling,0
+ENM,5030,Introduction to Probability & Statistics,0
+ENM,5220,Numerical Methods for PDEs,0
+ENM,5310,Data-driven Modeling & Probabilistic Scientific Computing,0
+ENM,5400,Topics in Computational Science & Engineering,0
+ESE,5000,Linear System Theory,0
+ESE,5040,Introduction to Optimization Theory,0
+ESE,5050,Control of Systems,0
+ESE,5060,Introduction to Optimization Theory,0
+ESE,5070,Introduction to Networks and Protocols,0
+ESE,5090,Quantum Circuits & Systems,0
+ESE,5140,Graph Neural Networks,0
+ESE,5160,IoT Edge Computing,0
+ESE,5190,Real-Time and Embedded Systems,0
+ESE,5200,Agent-Based Modeling & Simulation,0
+ESE,5300,Elements of Probability Theory,0
+ESE,5310,Digital Signal Processing,0
+ESE,5320,System-on-a-Chip Architecture,0
+ESE,5340,Computer Organization,0
+ESE,5350,Electronic Design Automation,0
+ESE,5390,Hardware/Software Co-Design for Machine Learning,0
+ESE,5400,Engineering Economics,0
+ESE,5420,Statistics for Data Science,0
+ESE,5430,Human Systems Engineering,0
+ESE,5440,Project Management,0
+ESE,5450,Data Mining,0
+ESE,5750,Intro to Wireless Systems,0
+ESE,5760,Digital Communication Systems,0
+ESE,5900,Systems Methodology,0
+ESE,6050,Modern Convex Optimization,0
+ESE,6150,F1/10 Autonomous Racing Cars,0
+ESE,6180,Learning for Dynamics and Control,0
+ESE,6450,Deep Generative Models,0
+ESE,6500,Learning in Robotics,0
+ESE,6650,Datacenter Architecture,0
+ESE,6740,Information Theory,0
+ESE,6760,Coding Theory,0
+ESE,6800,Dynamic Programming & Stochastic Control,0
+FNAR,5670,Computer Animation,0
+GAFL,5310,Data Science for Public Policy,2
+GCB,5360,Computational Biology,0
+IPD,5150,Product Design,1
+IPD,5720,Design Thinking & Making,1
+LAW,5770,Internet Law,0
+LING,5150,Dynamics of Language,0
+LING,5250,Computer Analysis & Modeling of Biological Signals & Systems,0
+LING,5450,Math Foundations of Language Communication I,0
+LING,5460,Math Foundations of Language Communication II,0
+LING,5490,Mathematical Techniques in NLP,0
+MATH,5000,Topology,0
+MATH,5020,Abstract Algebra,0
+MATH,5080,Advanced Analysis,0
+MATH,5010,Geometry-Topology/Differential Geometry,0
+MATH,5130,Computational Linear Algebra,0
+MATH,5140,Advanced Linear Algebra,0
+MATH,5300,Mathematics of Finance,0
+MATH,5460,Advanced Probability,0
+MATH,5470,Stochastic Processes,0
+MATH,5700,Introduction to Logic & Computability,0
+MATH,5710,Introduction to Logic & Computability,0
+MATH,5740,Mathematical Theory of Computation,0
+MATH,5800,Combinatorial Analysis and Graph Theory,0
+MATH,5810,Combinatorial Analysis and Graph Theory,0
+MATH,5820,Applied Mathematics & Computation,0
+MATH,5840,The Mathematics of Medical Imaging & Measurement,0
+MATH,5860,Topics in Mathematical Biology,0
+MATH,6900,Mathematical Foundations of Program Semantics,0
+MATH,6910,Topics in Mathematical Foundations of Computer Security,0
+MEAM,5060,Failure Analysis of Engineering Materials,0
+MEAM,5100,Design of Mechatronic Systems,0
+MEAM,5200,Intro to Robotics,0
+MEAM,5210,Introduction to Scientific Computing for Scientific Applications,0
+MEAM,6200,Advanced Robotics,0
+MEAM,6250,Haptic Interfaces for Virtual Environments & Teleoperation,0
+MEAM,6460,Computational Mechanics,0
+MSE,5610,Atomistic Modeling in Materials Science,0
+MSE,5750,Statistical Mechanics,0
+MSE,5760,Machine Learning and Its Applications in Materials Science,0
+NPLD,7920,Social Entrepreneurship,1
+PHIL,6770,Philosophy of Mathematics,0
+PHYS,6601,Introduction to Field Theory,0
+FNCE,6110,Corporate Finance,0
+FNCE,7170,Financial Derivatives,0
+FNCE,7200,Investment Management,0
+FNCE,7210,Real Estate Finance: Investment and Analysis,0
+FNCE,7250,Fixed Income Securities,0
+FNCE,7370,Data Science for Finance,2
+FNCE,7380,Capital Markets,0
+FNCE,7500,Venture Capitalism & Financial Innovation,0
+FNCE,8920,Financial Engineering,0
+MKTG,7120,Data Analysis for Marketing Decisions,0
+MKTG,7760,Applied Probability Models in Marketing,0
+MKTG,7770,Marketing Strategy & Technology,0
+MKTG,8520,Marketing Analytics,0
+OIDD,5150,Product Design,0
+OIDD,6530,Mathematical Modeling & Its Application in Finance,0
+OIDD,6540,Product Management,0
+OIDD,6700,Simulation and Dynamic Competitive Strategy,0
+OIDD,9500,Information Systems: Representation & Discovery,0
+OIDD,9340,Dynamic Programming & Stochastic Models,0
+STAT,5100,Probability,0
+STAT,5000,Applied Regression & Analysis of Variance,0
+STAT,5010,Introduction to Nonparametric Methods and Log-linear Models,0
+STAT,5030,Data Analytics and Statistical Computing,0
+STAT,5110,Statistical Inference,0
+STAT,5120,Mathematical Statistics,0
+STAT,5150,Advanced Statistical Inference I,0
+STAT,5200,Applied Econometrics I,0
+STAT,5300,Advanced Probability,0
+STAT,5310,Stochastic Processes,0
+STAT,5330,Stochastic Processes,0
+STAT,5530,Machine Learning,0
+STAT,5420,Bayesian Methods & Computation,0
+STAT,5710,Modern Data Mining,0
+STAT,7050,Statistical Computing with R,0
+STAT,5350,Forecasting Methods for Management,0
+STAT,7700,Data Analytics & Statistical Computing,0
+STAT,7220,Predictive Analytics,0
+STAT,7240,Text Analytics,2
+STAT,7770,Intro To Python Data Sci,2
+STAT,9000,Probability & Combinatorial Optimization,0
+STAT,9270,Bayesian Statistical Theory and Methods,0
+STAT,9280,Statistical Learning Theory,0
+STAT,9300,Probability Theory,0
+STAT,9700,Mathematical Statistics,0
+STAT,9740,Modern Regression,0
+STAT,9910,Regularization Methods for Learning,0
+STAT,9910,Topics in Modern Statistical Learning,0
+
+
+

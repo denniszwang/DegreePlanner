@@ -1,0 +1,298 @@
+[
+{
+	"Code":"CIT 59X",
+	"Name":"MCIT Foundations",
+	"Pre-reqs":[],
+	"Quality":4.00,
+	"Workload":1.00,
+	"Tags":["PL", "Coq"]
+},
+{
+	"Code":"CIS 500",
+	"Name":"Software Foundations",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.05,
+	"Workload":2.96,
+	"Tags":["PL", "Coq"]
+},
+{
+    "Code":"CIS 501",
+    "Name":"Computer Architecture",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.00,
+	"Workload":2.96,
+	"Tags":["Systems"]
+},
+{
+    "Code":"CIS 502",
+    "Name":"Analysis of Algorithms",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.34,
+	"Workload":3.42,
+	"Tags":["Theory"]
+},
+{
+    "Code":"CIS 505",
+    "Name":"Software Systems",
+    "Pre-reqs":["CIT 59X"],
+	"Quality":3.49,
+	"Workload":3.64,
+	"Tags":["Systems", "C++"]
+},
+{
+    "Code":"CIS 511",
+    "Name":"Theory of Computation",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.88,
+	"Workload":2.38,
+    "Tags":["Theory"]
+},
+{
+	"Code":"CIS 512",
+	"Name":"Introduction to HCI",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.16,
+	"Workload":2.88,
+	"Tags":["Web"]
+},
+{
+    "Code":"CIS 515",
+    "Name":"Fundamentals of Linear Algerbra and Optimization",
+	"Pre-reqs":["CIT 59X"],
+    "Quality":1.76,
+	"Workload":3.19,
+    "Tags":["Theory"]
+},
+{
+	"Code":"CIS 519",
+	"Name":"Applied Machine Learning",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.83,
+	"Workload":2.82,
+	"Tags":["ml", "Python", "ai"]
+},
+{
+    "Code":"CIS 520",
+    "Name":"Machine Learning",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.42,
+	"Workload":2.23,
+    "Tags":["ml", "Python", "ai"]
+},
+{
+	"Code":"CIS 521",
+	"Name":"Artificial Intelligence",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.07,
+	"Workload":2.64,
+	"Tags":["ai", "Python"]
+},
+{
+    "Code":"CIS 522",
+    "Name":"Deep Learning for Data Science",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":1.94,
+	"Workload":2.27,
+    "Tags":["ai", "ml"]
+},
+{
+	"Code":"CIS 523",
+	"Name":"Ethical Algorithm Design",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.67,
+	"Workload":2.00,
+	"Tags":["Theory"]
+},
+{
+    "Code":"CIS 530",
+    "Name":"Natural Language Processing",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.10,
+	"Workload":2.65,
+    "Tags":["ai", "ling"]
+},
+{
+	"Code":"CIS 541",
+	"Name":"Embedded SOftware",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":0.8,
+	"Workload":3.25,
+	"Tags":["Systems"]
+},
+{
+	"Code":"CIS 545",
+    "Name":"Big Data Analytics",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.70,
+	"Workload":2.89,
+    "Tags":["Theory", "Systems"]
+},
+{
+    "Code":"CIS 547",
+    "Name":"Software Analysis",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.93,
+	"Workload":2.35,
+    "Tags":["C++", "C", "SWE"]
+},
+{
+    "Code":"CIS 548",
+    "Name":"Operating Systems Design and Implementation",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.58,
+	"Workload":3.35,
+    "Tags":["Systems"]
+},
+{
+    "Code":"CIS 549",
+    "Name":"Wireless Communication for Mobile Networks and Internet of Things",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.90,
+	"Workload":3.17,
+    "Tags":["Systems"]
+},
+{
+	"Code":"CIS 550",
+	"Name":"Datebase & Info Systems",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.88,
+	"Workload":2.92,
+	"Tags":[]
+},
+{
+    "Code":"CIS 551",
+    "Name":"Network Security",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.43,
+	"Workload":3.32,
+	"Tags":["Security", "Networks"]
+},
+{
+    "Code":"CIS 552",
+    "Name":"Advanced Programming",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.97,
+	"Workload":2.71,
+	"Tags":["haskell", "pair programming"]
+},
+{
+	"Code":"CIS 553",
+	"Name":"Networked Systems",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.90,
+	"Workload":3.05,
+	"Tags":["Networks"]
+},
+{
+	"Code":"CIS 555",
+	"Name":"Internet & Web Systems",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.26,
+	"Workload":3.74,
+	"Tags":["System"]
+},
+{
+    "Code":"CIS 556",
+    "Name":"Cryptography",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.98,
+	"Workload":2.33,
+    "Tags":["Security"]
+},
+{
+    "Code":"CIS 557",
+    "Name":"Web Programming ",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":1.88,
+	"Workload":2.60,
+	"Tags":["Web"]
+},
+{
+    "Code":"CIS 559",
+    "Name":"Programming and Problem Solving",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.53,
+	"Workload":2.75,
+	"Tags":["pair programming"]
+},
+{
+	"Code":"CIS 560",
+	"Name":"Interactive Comp Graphics",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.74,
+	"Workload":3.57,
+	"Tags":["Graphics"]
+},
+{
+    "Code":"CIS 573",
+    "Name":"Software Engineering",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":3.21,
+	"Workload":1.36,
+	"Tags":["pair porgramming"]
+},
+{
+	"Code":"CIS 581",
+	"Name":"Computer Vision",
+	"Pre-reqs":["CIT 59X"],
+	"Quality":2.03,
+	"Workload":2.67,
+	"Tags":["ai"]
+},
+{
+	"Code":"CIS 601",
+	"Name":"Advanced Topics in Computer Architecture",
+	"Pre-reqs":["CIS 501"],
+	"Quality":2.87,
+	"Workload":2.53,
+	"Tags":["Systems"]
+},
+{
+	"Code":"CIS 610",
+	"Name":"Advanced Geometric Methods in Computer Science",
+	"Pre-reqs":["CIS 501"],
+	"Quality":2.91,
+	"Workload":2.38,
+	"Tags":["Systems"]
+},
+{
+	"Code":"CIS 620",
+	"Name":"Advanced Topic in Machine Learning",
+	"Pre-reqs":["CIS 520"],
+	"Quality":2.41,
+	"Workload":2.52,
+	"Tags":["ai", "ml"]
+},
+{
+	"Code":"CIS 630",
+	"Name":"Advanced Topic in Natural Language Processing",
+	"Pre-reqs":["CIS 530"],
+	"Quality":2.39,
+	"Workload":2.85,
+	"Tags":["ai", "ling"]
+},
+{
+	"Code":"CIS 640",
+	"Name":"dvance Topics in Software Systems: Data Driven IoT/Edge Computing",
+	"Pre-reqs":["CIS 545", "CIS 519", "CIS 505"],
+	"Quality":2.72,
+	"Workload":2.86,
+	"Tags":["Systems"] 
+},
+{
+	"Code":"CIS 650",
+	"Name":"Advanced Topics in Databases",
+	"Pre-reqs":["CIS 550"],
+	"Quality":2.29,
+	"Workload":2.77,
+	"Tags":["database"]
+},
+{
+	"Code":"CIS 660",
+	"Name":"Advanced Topics in Computer Graphics and Animation",
+	"Pre-reqs":["CIS 560"],
+	"Quality":2.53,
+	"Workload":2.38,
+	"Tags":["graph"]
+}
+]
