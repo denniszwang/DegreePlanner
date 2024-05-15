@@ -4,11 +4,12 @@ import java.util.*;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.sun.jdi.request.ClassUnloadRequest;
 
 import java.io.IOException;
 import java.nio.file.Paths;
 
-public class CourseCatalog implements ICourseCatalog{
+public class CourseCatalog {
 
     private Map<String, List<String>> courseTopics;
     private List<Course> cisCourses;
@@ -19,7 +20,6 @@ public class CourseCatalog implements ICourseCatalog{
     private String nonCisFilePath;
 
     private CourseGraph courseGraph;
-    private Scanner scanner;
     private final int numElectives = 4;
 
     public CourseCatalog() {
@@ -27,7 +27,6 @@ public class CourseCatalog implements ICourseCatalog{
         this.nonCisFilePath = "./data/non_cis_elective.csv";
     }
 
-    @Override
     public void readDataIntoStructures() {
         readCISElectiveData();
         readNonCISElectiveData();
@@ -143,72 +142,72 @@ public class CourseCatalog implements ICourseCatalog{
         return suggestedCourses;
     }
 
-    // search for elective courses based on the department id, or course id, or course name
-    public List<Course> searchElective(String search) {
-        List<Course> electiveCourses = new ArrayList<>();
-        int inputSize = search.length();
+
+
+    // search for elective courses based on the keyword
+    public Course searchElective(String search) {
+        Course matchingCourse = null;
+        String matchingWord = "";
+        int minDistance = Integer.MAX_VALUE;
+
+        // Convert the search term to uppercase for case-insensitive comparison
+        String searchedItem = search.toUpperCase();
 
         for (Course course : nonCisCourses) {
             String courseName = course.getName().toUpperCase();
-            String courseId = course.getCode();
-            String departmentId = courseId.substring(0, 4).trim();
-            String searchedItem = search.toUpperCase();
-            if (inputSize <= 4) {
-                if (departmentId.equals(searchedItem)) {
-                    electiveCourses.add(course);
-                }
-            } else if (inputSize <= 9) {
-                if (courseId.equals(searchedItem)) {
-                    electiveCourses.add(course);
-                    break;
-                }
-            } else {
-                if (courseName.contains(searchedItem)) {
-                    electiveCourses.add(course);
-                    break;
-                }
+            if (courseName.contains(searchedItem)) {
+                matchingCourse = course;
+                minDistance = 0;
+                break;
+            }
 
+            // Calculate Levenshtein distance between the search term and course name
+            for (String word : courseName.split("\\s+")) { // Split the course name into individual words
+                int wordLen = word.length();
+                int searchLen = searchedItem.length();
+                if (wordLen < searchLen - 1) {
+                    continue;
+                }
+                int distance = levenshteinDistance(word, searchedItem);
+                if (distance < 3 && distance < minDistance) {
+                    minDistance = distance;
+                    matchingCourse = course;
+                    matchingWord = word;
+                }
             }
         }
 
-        if (inputSize <= 4) {
-            //search by department id
-            if (electiveCourses.size() > 1) {
-                System.out.println("Here are pre-approved elective courses in " + search + " department: ");
-                for (Course course : electiveCourses) {
-                    System.out.println(course);
-                }
-            } else {
-                System.out.println("No matching elective courses in " + search+ " department found!");
-            }
-        }  else if (electiveCourses.size() == 1) {
-            //search by course id
-            Course course = electiveCourses.get(0);
-            System.out.println(course + " is a pre-approved elective course!");
-        } else {
-            System.out.println(search + " is not a pre-approved elective course!");
+        if (minDistance == 0) {
+            System.out.println(matchingCourse + " is a pre-approved elective!");
         }
-        System.out.println();
-        return electiveCourses;
+        else if (minDistance <= 2){
+            System.out.println("No exact match found for \"" + search.toLowerCase() + "\". Did you mean \"" +
+                    matchingWord.toLowerCase() + "\"?");
+        }
+
+        System.out.println("No matching elective found!");
+        return matchingCourse;
     }
 
-    @Override
-    public List<Course> getCourses() {
-        return null;
+    // Calculate Levenshtein distance between two strings
+    private int levenshteinDistance(String s1, String s2) {
+        int[][] dp = new int[s1.length() + 1][s2.length() + 1];
+
+        for (int i = 0; i <= s1.length(); i++) {
+            for (int j = 0; j <= s2.length(); j++) {
+                if (i == 0) {
+                    dp[i][j] = j;
+                } else if (j == 0) {
+                    dp[i][j] = i;
+                } else {
+                    dp[i][j] = s1.charAt(i - 1) == s2.charAt(j - 1) ?
+                            dp[i - 1][j - 1] :
+                            1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j]));
+                }
+            }
+        }
+
+        return dp[s1.length()][s2.length()];
     }
 
-    @Override
-    public List<String> getTopics() {
-        return null;
-    }
-
-    @Override
-    public List<String> courseTopics(String courseName) {
-        return null;
-    }
-
-    @Override
-    public List<String> topicCourses(String topic) {
-        return null;
-    }
 }

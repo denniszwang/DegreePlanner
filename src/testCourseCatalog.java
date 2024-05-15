@@ -32,17 +32,19 @@ public class testCourseCatalog {
     public void testSearchElective() {
         CourseCatalog cc = new CourseCatalog();
         cc.readDataIntoStructures();
-        List<Course> result = cc.searchElective("CIS");
-        assertEquals(0, result.size());
-        result = cc.searchElective("EAS");
-        assertEquals(8, result.size());
-        result = cc.searchElective("EAS 5000");
-        assertEquals(1, result.size());
-        result = cc.searchElective("EAS 5010");
-        assertEquals(0, result.size());
-        result = cc.searchElective("leadership");
-        assertEquals(1, result.size());
+//        List<Course> result = cc.searchElective("CIS");
+//        assertEquals(0, result.size());
+//        result = cc.searchElective("EAS");
+//        assertEquals(8, result.size());
+//        result = cc.searchElective("EAS 5000");
+//        assertEquals(1, result.size());
+//        result = cc.searchElective("EAS 5010");
+//        assertEquals(0, result.size());
+        Course result = cc.searchElective("leadership");
+        assertNotNull(result);
+        result = cc.searchElective("Laedership");
+        assertNotNull(result);
         result = cc.searchElective("basketball");
-        assertEquals(0, result.size());
+        assertNull(result);
     }
 }
