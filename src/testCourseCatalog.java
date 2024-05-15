@@ -32,40 +32,16 @@ public class testCourseCatalog {
     public void testSearchElective() {
         CourseCatalog cc = new CourseCatalog();
         cc.readDataIntoStructures();
-//        List<Course> result = cc.searchElective("CIS");
-//        assertEquals(0, result.size());
-//        result = cc.searchElective("EAS");
-//        assertEquals(8, result.size());
-//        result = cc.searchElective("EAS 5000");
-//        assertEquals(1, result.size());
-//        result = cc.searchElective("EAS 5010");
-//        assertEquals(0, result.size());
-        List<Course> result = cc.searchElective("leadership");
+        List<Course> result = cc.searchApprovedElective("leadership");
         assertEquals(1, result.size());
-        result = cc.searchElective("basketball");
+        result = cc.searchApprovedElective("basketball");
         assertEquals(0, result.size());
-    }
-
-    @Test
-    public void testTries() {
-        CourseCatalog cc = new CourseCatalog();
-        cc.readDataIntoStructures();
-        List<String> coursesCode = cc.autoComplete("EAS");
-        List<Course> suggestion = cc.searchElective(coursesCode);
-        for (Course c: suggestion) {
-            System.out.println(c);
-        }
-        System.out.println();
-
-        coursesCode = cc.autoComplete("EAS 50");
-        suggestion = cc.searchElective(coursesCode);
-        for (Course c: suggestion) {
-            System.out.println(c);
-        }
-        System.out.println();
-
-        coursesCode = cc.autoComplete("CIS");
-        suggestion = cc.searchElective(coursesCode);
+        List<Course> suggestion = cc.searchApprovedElective("EAS");
+        assertEquals(8, suggestion.size());
+        suggestion = cc.searchApprovedElective("EAS 50");
+        assertEquals(2, suggestion.size());
+        suggestion = cc.searchApprovedElective("CIS");
         assertEquals(0, suggestion.size());
     }
+
 }

@@ -39,7 +39,7 @@ public class Main {
                         System.out.println("Please enter a search term:");
                         System.out.println("You can search by department code, course code or course name");
                         String search = scanner.next();
-                        courseCatalog.searchElective(search);
+                        courseCatalog.searchApprovedElective(search);
                         System.out.println("Do you want to search again? (y/n)");
                         String response = scanner.next();
                         if (response.equals("n")) {

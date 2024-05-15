@@ -210,7 +210,7 @@ public class CourseCatalog {
         return current;
     }
 
-    public List<String> autoComplete(String prefix) {
+    private List<String> autoComplete(String prefix) {
         prefix = prefix.toUpperCase();
         List<String> suggestions = new ArrayList<>();
         CourseNode current = getSubTrie(prefix);
@@ -247,7 +247,7 @@ public class CourseCatalog {
     }
 
     // search for non-cis elective courses based on department id & course id
-    public List<Course> searchElective(List<String> courseCode) {
+    private List<Course> searchElective(List<String> courseCode) {
         List<Course> coursesFound = new ArrayList<>();
         for (String code: courseCode) {
             String name = nonCisMap.get(code);
@@ -258,26 +258,28 @@ public class CourseCatalog {
     }
 
     // search for non-cis elective courses based on the keyword
-    public List<Course> searchElective(String search) {
+    private List<Course> searchElective(String search) {
         List<Course> matchingCourses = new ArrayList<>();
         String matchingWord = "";
         int minDistance = Integer.MAX_VALUE;
 
         // Convert the search term to uppercase for case-insensitive comparison
-        String searchedItem = search.toUpperCase();
+        String searchedItem = search.toLowerCase();
 
         for (Course course : nonCisCourses) {
-            String courseName = course.getName().toUpperCase();
-            if (courseName.contains(searchedItem)) {
-                matchingCourses.add(course);
-                minDistance = 0;
+            String[] courseNameWords = course.getName().toLowerCase().split("\\s+");
+            for (String word: courseNameWords) {
+                if (word.equals(searchedItem)) {
+                    matchingCourses.add(course);
+                    minDistance = 0;
+                }
             }
 
             // Calculate Levenshtein distance between the search term and course name
-            for (String word : courseName.split("\\s+")) { // Split the course name into individual words
+            for (String word : courseNameWords) { // Split the course name into individual words
                 int wordLen = word.length();
                 int searchLen = searchedItem.length();
-                if (wordLen < searchLen - 1) {
+                if (wordLen < searchLen - 1 || wordLen > searchLen + 1) {
                     continue;
                 }
                 int distance = levenshteinDistance(word, searchedItem);
@@ -323,6 +325,26 @@ public class CourseCatalog {
         }
 
         return dp[s1.length()][s2.length()];
+    }
+
+    //Combine non-cis searching function
+    public List<Course> searchApprovedElective(String prefix) {
+        String header = "";
+        if (prefix.length() < 4) {
+            header = prefix.toUpperCase();
+        } else if (prefix.contains(" ")){
+            header = prefix.substring(0, 4).trim().toUpperCase();
+        }
+
+        String pattern = "^[A-Z]{2,4}$";
+        boolean match = header.matches(pattern);
+
+        if (match) {
+            List<String> courseCode = autoComplete(prefix);
+            return searchElective(courseCode);
+        } else {
+            return searchElective(prefix);
+        }
     }
 
 }
