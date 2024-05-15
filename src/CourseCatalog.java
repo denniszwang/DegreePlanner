@@ -19,6 +19,7 @@ public class CourseCatalog {
     private String nonCisFilePath;
 
     private CourseGraph courseGraph;
+    private CourseNode courseRoot;
     private final int numElectives = 4;
 
     public CourseCatalog() {
@@ -141,7 +142,124 @@ public class CourseCatalog {
         return suggestedCourses;
     }
 
+    public void addCourse(String courseCode) {
+        if (courseCode == null || courseCode.isEmpty()) {
+            return;
+        }
 
+        if (!isCisCourse(courseCode)) {
+            return;
+        }
+
+        CourseNode current = courseRoot;
+        for (int i = 0; i < courseCode.length(); i++) {
+            char c = courseCode.charAt(i);
+            int index = getCharIndex(c);
+            if (current.getReferences()[index] == null) {
+                current.getReferences()[index] = new CourseNode();
+            }
+            current.setPrefixes(current.getPrefixes() + 1);
+            current = current.getReferences()[index];
+        }
+        current.setWords(current.getWords() + 1);
+    }
+
+    private boolean isCisCourse(String courseCode) {
+        for (char c : courseCode.toCharArray()) {
+            if (!Character.isLetter(c) && !Character.isDigit(c) && c != ' ') {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private int getCharIndex(char c) {
+        if (c >= 'a' && c <= 'z') {
+            return c - 'a';
+        } else if (c >= '0' && c <= '9') {
+            return 26 + (c - '0');
+        } else if (c == ' ') {
+            return 36;
+        } else {
+            throw new IllegalArgumentException("Invalid character in course ID or name.");
+        }
+    }
+
+    public CourseNode buildTries(List<Course> nonCisCourses) {
+        courseRoot = new CourseNode();
+        for (Course course : nonCisCourses) {
+            String courseCode = course.getCode();
+            addCourse(courseCode);
+        }
+        return courseRoot;
+    }
+
+    public CourseNode getCourseRoot() {
+        return courseRoot;
+    }
+
+    public CourseNode getSubTrie(String prefix) {
+        if (prefix == null || prefix.isEmpty()) {
+            return null;
+        }
+
+        CourseNode current = courseRoot;
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+            int index = getCharIndex(c);
+            if (index < 0 || index > 36) {
+                return null;
+            }
+            if (current.getReferences()[index] == null) {
+                return null;
+            }
+            current = current.getReferences()[index];
+        }
+        return current;
+    }
+
+    public int countPrefixes(String prefix) {
+        CourseNode current = getSubTrie(prefix);
+        if (current != null) {
+            return current.getPrefixes();
+        }
+        return 0;
+    }
+
+    public List<String> getSuggestions(String prefix) {
+        List<String> suggestions = new ArrayList<>();
+        CourseNode current = getSubTrie(prefix);
+        if (current == null) {
+            return suggestions;
+        }
+        traverseTrie(current, suggestions, prefix);
+        return suggestions;
+    }
+
+    private void traverseTrie(CourseNode node, List<String> suggestions, String prefix) {
+        if (node.getWords() > 0) {
+            suggestions.add(prefix);
+        }
+        for (int i = 0; i < node.getReferences().length; i++) {
+            CourseNode next = node.getReferences()[i];
+            if (next != null) {
+                char nextChar = getIndexChar(i);
+                traverseTrie(next, suggestions, prefix + nextChar);
+            }
+        }
+    }
+
+    private char getIndexChar(int index) {
+        if (index >= 0 && index < 26) {
+            return (char) ('a' + index);
+        } else if (index >= 26 && index < 36) {
+            return (char) ('0' + (index - 26));
+        } else if (index == 36) {
+            return ' ';
+        } else {
+            throw new IllegalArgumentException("Invalid index in trie.");
+        }
+    }
 
     // search for elective courses based on the keyword
     public Course searchElective(String search) {
@@ -182,9 +300,11 @@ public class CourseCatalog {
         else if (minDistance <= 2){
             System.out.println("No exact match found for \"" + search.toLowerCase() + "\". Did you mean \"" +
                     matchingWord.toLowerCase() + "\"?");
+
+        } else {
+            System.out.println("No matching elective found!");
         }
 
-        System.out.println("No matching elective found!");
         return matchingCourse;
     }
 

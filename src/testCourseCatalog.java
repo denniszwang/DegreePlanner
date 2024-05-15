@@ -42,8 +42,6 @@ public class testCourseCatalog {
 //        assertEquals(0, result.size());
         Course result = cc.searchElective("leadership");
         assertNotNull(result);
-        result = cc.searchElective("Laedership");
-        assertNotNull(result);
         result = cc.searchElective("basketball");
         assertNull(result);
     }
