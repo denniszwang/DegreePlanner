@@ -9,12 +9,11 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 public class CourseCatalog {
-
-    private Map<String, List<String>> courseTopics;
     private List<Course> cisCourses;
     private List<String> cisCourseCodes;
     private List<Course> nonCisCourses;
-    private Map<String, String> nonCisMap;
+    private List<Course> courseCart;
+    private Map<String, String> courseMap;
 
     private String cisFilePath;
     private String nonCisFilePath;
@@ -22,10 +21,13 @@ public class CourseCatalog {
     private CourseGraph courseGraph;
     private CourseNode courseRoot;
     private final int numElectives = 4;
+    private int courseCount = 0;
 
     public CourseCatalog() {
         this.cisFilePath = "./data/CIS.json";
         this.nonCisFilePath = "./data/non_cis_elective.csv";
+        this.courseCart = new ArrayList<>();
+        this.courseMap = new HashMap<>();
     }
 
     public void readDataIntoStructures() {
@@ -40,6 +42,7 @@ public class CourseCatalog {
             cisCourseCodes = new ArrayList<>();
             for (Course course : cisCourses) {
                 cisCourseCodes.add(course.getCode());
+                courseMap.put(course.getCode(), course.getName());
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,7 +54,6 @@ public class CourseCatalog {
                 br.readLine();
                 String line;
                 nonCisCourses = new ArrayList<>();
-                nonCisMap = new HashMap<>();
                 courseRoot = new CourseNode();
                 while ((line = br.readLine()) != null) {
                     String[] data = line.split(",");
@@ -59,13 +61,13 @@ public class CourseCatalog {
                         continue;
                     }
                     String departId = data[0].trim();
-                    String courseId = data[1].trim();
+                    String courseId = data[1].substring(0, 3).trim();
                     String code = departId + " " + courseId;
                     String name = data[2].trim();
                     Course course = new Course(code, name);
                     nonCisCourses.add(course);
-                    nonCisMap.put(code, name);
-                    addCourse(code);
+                    courseMap.put(code, name);
+                    addElective(code);
                 }
 
             } catch (Exception e) {
@@ -147,12 +149,12 @@ public class CourseCatalog {
         return suggestedCourses;
     }
 
-    private void addCourse(String courseCode) {
+    private void addElective(String courseCode) {
         if (courseCode == null || courseCode.isEmpty()) {
             return;
         }
 
-        if (!isCisCourse(courseCode)) {
+        if (!isValidCourse(courseCode)) {
             return;
         }
 
@@ -169,7 +171,7 @@ public class CourseCatalog {
         current.setWords(current.getWords() + 1);
     }
 
-    private boolean isCisCourse(String courseCode) {
+    private boolean isValidCourse(String courseCode) {
         for (char c : courseCode.toCharArray()) {
             if (!Character.isLetter(c) && !Character.isDigit(c) && c != ' ') {
                 return false;
@@ -250,7 +252,7 @@ public class CourseCatalog {
     private List<Course> searchElective(List<String> courseCode) {
         List<Course> coursesFound = new ArrayList<>();
         for (String code: courseCode) {
-            String name = nonCisMap.get(code);
+            String name = courseMap.get(code);
             Course course = new Course(code, name);
             coursesFound.add(course);
         }
@@ -345,6 +347,51 @@ public class CourseCatalog {
         } else {
             return searchElective(prefix);
         }
+    }
+
+    public void addCourseToCart(String courseCode) {
+        String name = courseMap.get(courseCode);
+        if (name == null) {
+            System.out.println("Course not found in catalog.");
+            return;
+        }
+        Course course = new Course(courseCode, name);
+        courseCart.add(course);
+        courseCount++;
+        System.out.println(course + " has been added to your cart.");
+    }
+
+    public void removeCourseFromCart(String courseCode) {
+        for (Course course : courseCart) {
+            if (course.getCode().equals(courseCode)) {
+                courseCart.remove(course);
+                courseCount--;
+                System.out.println(courseCode + " has been removed from your cart.");
+                return;
+            }
+        }
+        System.out.println("Course not found in cart.");
+    }
+
+    public void displayCart() {
+        System.out.println("Your cart contains the following courses:");
+        for (Course course : courseCart) {
+            System.out.println(course);
+        }
+    }
+
+    public void clearCart() {
+        courseCart.clear();
+        courseCount = 0;
+        System.out.println("Your cart has been cleared.");
+    }
+
+    public boolean isCISElective(String courseCode) {
+        return cisCourseCodes.contains(courseCode);
+    }
+
+    public int getCourseCount() {
+        return courseCount;
     }
 
 }

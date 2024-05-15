@@ -44,4 +44,22 @@ public class testCourseCatalog {
         assertEquals(0, suggestion.size());
     }
 
+    @Test
+    public void testCourseCart() {
+        CourseCatalog cc = new CourseCatalog();
+        cc.readDataIntoStructures();
+        cc.addCourseToCart("CIS 550");
+        cc.addCourseToCart("CIS 557");
+        cc.addCourseToCart("CIS 559");
+        cc.addCourseToCart("CIS 573");
+        cc.removeCourseFromCart("CIS 557");
+        cc.addCourseToCart("EAS 512");
+        cc.displayCart();
+        assertEquals(4, cc.getCourseCount());
+        cc.clearCart();
+        assertEquals(0, cc.getCourseCount());
+        assertTrue(cc.isCISElective("CIS 550"));
+        assertFalse(cc.isCISElective("CIS"));
+        assertFalse(cc.isCISElective("EAS 512"));
+    }
 }
