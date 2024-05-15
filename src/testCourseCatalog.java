@@ -40,9 +40,32 @@ public class testCourseCatalog {
 //        assertEquals(1, result.size());
 //        result = cc.searchElective("EAS 5010");
 //        assertEquals(0, result.size());
-        Course result = cc.searchElective("leadership");
-        assertNotNull(result);
+        List<Course> result = cc.searchElective("leadership");
+        assertEquals(1, result.size());
         result = cc.searchElective("basketball");
-        assertNull(result);
+        assertEquals(0, result.size());
+    }
+
+    @Test
+    public void testTries() {
+        CourseCatalog cc = new CourseCatalog();
+        cc.readDataIntoStructures();
+        List<String> coursesCode = cc.autoComplete("EAS");
+        List<Course> suggestion = cc.searchElective(coursesCode);
+        for (Course c: suggestion) {
+            System.out.println(c);
+        }
+        System.out.println();
+
+        coursesCode = cc.autoComplete("EAS 50");
+        suggestion = cc.searchElective(coursesCode);
+        for (Course c: suggestion) {
+            System.out.println(c);
+        }
+        System.out.println();
+
+        coursesCode = cc.autoComplete("CIS");
+        suggestion = cc.searchElective(coursesCode);
+        assertEquals(0, suggestion.size());
     }
 }

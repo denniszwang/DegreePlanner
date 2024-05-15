@@ -14,6 +14,7 @@ public class CourseCatalog {
     private List<Course> cisCourses;
     private List<String> cisCourseCodes;
     private List<Course> nonCisCourses;
+    private Map<String, String> nonCisMap;
 
     private String cisFilePath;
     private String nonCisFilePath;
@@ -50,6 +51,8 @@ public class CourseCatalog {
                 br.readLine();
                 String line;
                 nonCisCourses = new ArrayList<>();
+                nonCisMap = new HashMap<>();
+                courseRoot = new CourseNode();
                 while ((line = br.readLine()) != null) {
                     String[] data = line.split(",");
                     if (data.length < 4) {
@@ -61,6 +64,8 @@ public class CourseCatalog {
                     String name = data[2].trim();
                     Course course = new Course(code, name);
                     nonCisCourses.add(course);
+                    nonCisMap.put(code, name);
+                    addCourse(code);
                 }
 
             } catch (Exception e) {
@@ -142,7 +147,7 @@ public class CourseCatalog {
         return suggestedCourses;
     }
 
-    public void addCourse(String courseCode) {
+    private void addCourse(String courseCode) {
         if (courseCode == null || courseCode.isEmpty()) {
             return;
         }
@@ -174,8 +179,8 @@ public class CourseCatalog {
     }
 
     private int getCharIndex(char c) {
-        if (c >= 'a' && c <= 'z') {
-            return c - 'a';
+        if (c >= 'A' && c <= 'Z') {
+            return c - 'A';
         } else if (c >= '0' && c <= '9') {
             return 26 + (c - '0');
         } else if (c == ' ') {
@@ -185,20 +190,7 @@ public class CourseCatalog {
         }
     }
 
-    public CourseNode buildTries(List<Course> nonCisCourses) {
-        courseRoot = new CourseNode();
-        for (Course course : nonCisCourses) {
-            String courseCode = course.getCode();
-            addCourse(courseCode);
-        }
-        return courseRoot;
-    }
-
-    public CourseNode getCourseRoot() {
-        return courseRoot;
-    }
-
-    public CourseNode getSubTrie(String prefix) {
+    private CourseNode getSubTrie(String prefix) {
         if (prefix == null || prefix.isEmpty()) {
             return null;
         }
@@ -218,15 +210,8 @@ public class CourseCatalog {
         return current;
     }
 
-    public int countPrefixes(String prefix) {
-        CourseNode current = getSubTrie(prefix);
-        if (current != null) {
-            return current.getPrefixes();
-        }
-        return 0;
-    }
-
-    public List<String> getSuggestions(String prefix) {
+    public List<String> autoComplete(String prefix) {
+        prefix = prefix.toUpperCase();
         List<String> suggestions = new ArrayList<>();
         CourseNode current = getSubTrie(prefix);
         if (current == null) {
@@ -251,7 +236,7 @@ public class CourseCatalog {
 
     private char getIndexChar(int index) {
         if (index >= 0 && index < 26) {
-            return (char) ('a' + index);
+            return (char) ('A' + index);
         } else if (index >= 26 && index < 36) {
             return (char) ('0' + (index - 26));
         } else if (index == 36) {
@@ -261,9 +246,20 @@ public class CourseCatalog {
         }
     }
 
-    // search for elective courses based on the keyword
-    public Course searchElective(String search) {
-        Course matchingCourse = null;
+    // search for non-cis elective courses based on department id & course id
+    public List<Course> searchElective(List<String> courseCode) {
+        List<Course> coursesFound = new ArrayList<>();
+        for (String code: courseCode) {
+            String name = nonCisMap.get(code);
+            Course course = new Course(code, name);
+            coursesFound.add(course);
+        }
+        return coursesFound;
+    }
+
+    // search for non-cis elective courses based on the keyword
+    public List<Course> searchElective(String search) {
+        List<Course> matchingCourses = new ArrayList<>();
         String matchingWord = "";
         int minDistance = Integer.MAX_VALUE;
 
@@ -273,9 +269,8 @@ public class CourseCatalog {
         for (Course course : nonCisCourses) {
             String courseName = course.getName().toUpperCase();
             if (courseName.contains(searchedItem)) {
-                matchingCourse = course;
+                matchingCourses.add(course);
                 minDistance = 0;
-                break;
             }
 
             // Calculate Levenshtein distance between the search term and course name
@@ -288,24 +283,25 @@ public class CourseCatalog {
                 int distance = levenshteinDistance(word, searchedItem);
                 if (distance < 3 && distance < minDistance) {
                     minDistance = distance;
-                    matchingCourse = course;
+                    matchingCourses.add(course);
                     matchingWord = word;
                 }
             }
         }
 
         if (minDistance == 0) {
-            System.out.println(matchingCourse + " is a pre-approved elective!");
+            for (Course c: matchingCourses) {
+                System.out.println(c + "is a pre-approved non-CIS elective!");
+            }
         }
         else if (minDistance <= 2){
             System.out.println("No exact match found for \"" + search.toLowerCase() + "\". Did you mean \"" +
                     matchingWord.toLowerCase() + "\"?");
-
         } else {
             System.out.println("No matching elective found!");
         }
 
-        return matchingCourse;
+        return matchingCourses;
     }
 
     // Calculate Levenshtein distance between two strings
