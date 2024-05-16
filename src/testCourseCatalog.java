@@ -58,12 +58,22 @@ public class testCourseCatalog {
         assertEquals(4, cc.getCourseCartSize());
         cc.clearCart();
         assertEquals(0, cc.getCourseCartSize());
-        cc.addCourseToCart("CIS 550");
+        cc.addCourseToCart("CIS 545");
         assertTrue(cc.allowToCart("CIS 557"));
         cc.addCourseToCart("CIS 557");
         assertFalse(cc.allowToCart("CIS 557"));
         cc.addCourseToCart("EAS 512");
         assertFalse(cc.allowToCart("EAS 590"));
         assertTrue(cc.allowToCart("CIS 573"));
+        cc.addCourseToCart("CIS 521");
+
+        int[] score = cc.convertToInterestScores();
+        assertEquals(5, score[5]);
+        assertEquals(5, score[4]);
+        assertEquals(0, score[3]);
+        assertEquals(3, score[2]);
+        assertEquals(3, score[1]);
+        assertEquals(0, score[0]);
     }
+    
 }

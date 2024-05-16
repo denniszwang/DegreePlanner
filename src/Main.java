@@ -76,7 +76,14 @@ public class Main {
 
                 case 4:
                     // Pair with a mentor
+                    quit = false;
+                    scanner.nextLine();
+                    while (!quit) {
+                        System.out.println("Please enter your Name to match a mentor:");
+                        String name = scanner.nextLine();
+                        int[] interestScores = courseCatalog.convertToInterestScores();
 
+                    }
                     break;
 
                 case 5:

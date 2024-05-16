@@ -67,7 +67,7 @@ public class CourseCatalog {
                     Course course = new Course(code, name);
                     nonCisCourses.add(course);
                     courseMap.put(code, name);
-                    addElective(code);
+                    addCourse(code);
                 }
 
             } catch (Exception e) {
@@ -149,7 +149,8 @@ public class CourseCatalog {
         return suggestedCourses;
     }
 
-    private void addElective(String courseCode) {
+    // add course to the trie data structure
+    private void addCourse(String courseCode) {
         if (courseCode == null || courseCode.isEmpty()) {
             return;
         }
@@ -171,6 +172,7 @@ public class CourseCatalog {
         current.setWords(current.getWords() + 1);
     }
 
+    // check if the course code is valid
     private boolean isValidCourse(String courseCode) {
         for (char c : courseCode.toCharArray()) {
             if (!Character.isLetter(c) && !Character.isDigit(c) && c != ' ') {
@@ -180,6 +182,7 @@ public class CourseCatalog {
         return true;
     }
 
+    // get the index of the character in the trie
     private int getCharIndex(char c) {
         if (c >= 'A' && c <= 'Z') {
             return c - 'A';
@@ -192,6 +195,7 @@ public class CourseCatalog {
         }
     }
 
+    // get the subtrie based on the prefix
     private CourseNode getSubTrie(String prefix) {
         if (prefix == null || prefix.isEmpty()) {
             return null;
@@ -212,6 +216,7 @@ public class CourseCatalog {
         return current;
     }
 
+    // get the list of suggestions based on the prefix
     private List<String> autoComplete(String prefix) {
         prefix = prefix.toUpperCase();
         List<String> suggestions = new ArrayList<>();
@@ -223,6 +228,7 @@ public class CourseCatalog {
         return suggestions;
     }
 
+    // traverse the trie to get the suggestions
     private void traverseTrie(CourseNode node, List<String> suggestions, String prefix) {
         if (node.getWords() > 0) {
             suggestions.add(prefix);
@@ -236,6 +242,7 @@ public class CourseCatalog {
         }
     }
 
+    // get the character based on the index
     private char getIndexChar(int index) {
         if (index >= 0 && index < 26) {
             return (char) ('A' + index);
@@ -349,6 +356,7 @@ public class CourseCatalog {
         }
     }
 
+    //Allow to add course to cart
     public boolean allowToCart(String courseCode) {
         courseCode = courseCode.toUpperCase();
         if (courseCart.size() >= 4) {
@@ -370,17 +378,35 @@ public class CourseCatalog {
             System.out.println("Course not found in catalog.");
             return false;
         }
+        if (isCISElective(courseCode)) {
+            int id = cisCourseCodes.indexOf(courseCode);
+            Course course = cisCourses.get(id);
+            if (course.getPrereqs() != null) {
+                boolean flag = false;
+                for (String prereq : course.getPrereqs()) {
+                    if (prereq.equals("CIT 59X") || courseCart.contains(new Course(prereq, courseMap.get(prereq)))) {
+                        flag = true;
+                    }
+                }
+                if (!flag) {
+                    System.out.println("You need to add the prerequisites for " + courseCode + " to your cart.");
+                    return false;
+                }
+            }
+        }
         return true;
     }
 
     public void addCourseToCart(String courseCode) {
         courseCode = courseCode.toUpperCase();
-        String name = courseMap.get(courseCode);
-        Course course = new Course(courseCode, name);
-        courseCart.add(course);
+        Course course;
         if (isCISElective(courseCode)) {
             cisCourseCount++;
+            course = cisCourses.get(cisCourseCodes.indexOf(courseCode));
+        } else {
+            course = new Course(courseCode, courseMap.get(courseCode));
         }
+        courseCart.add(course);
         System.out.println(course + " has been added to your cart.");
     }
 
@@ -416,8 +442,58 @@ public class CourseCatalog {
         return courseCart.size();
     }
 
+    //Check if the course is a CIS elective
     private boolean isCISElective(String courseCode) {
         return cisCourseCodes.contains(courseCode);
+    }
+
+    //Calculate the interest scores based on the courses in the cart
+    public int[] convertToInterestScores() {
+        int[] interestScores = new int[6];
+        int sde = 0;
+        int ds = 0;
+        int research = 0;
+        for (Course course : courseCart) {
+            if (!isCISElective(course.getCode())) {
+               interestScores[5] = 5;
+               break;
+            }
+            List<String> topics = course.getTopics();
+            if (topics.contains("Web")) {
+               interestScores[4] = 5;
+            }
+            if (topics.contains("Graphics")) {
+               interestScores[3] = 5;
+            }
+            if (topics.contains("Theory") || topics.contains("Systems")) {
+                research++;
+            }
+            if (topics.contains("ai") || course.getName().toLowerCase().contains("data")) {
+               ds++;
+            }
+            if (topics.contains("Security") || course.getName().toLowerCase().contains("software")) {
+               sde++;
+            }
+        }
+        if (research >= 2) {
+            interestScores[2] = 5;
+        } else if (research > 0) {
+            interestScores[2] = 3;
+        }
+
+        if (ds >= 2) {
+            interestScores[1] = 5;
+        } else if (ds > 0) {
+            interestScores[1] = 3;
+        }
+
+        if (sde >= 2) {
+            interestScores[0] = 5;
+        } else if (sde > 0) {
+            interestScores[0] = 3;
+        }
+
+        return interestScores;
     }
 
 }
