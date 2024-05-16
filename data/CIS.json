@@ -157,7 +157,7 @@
 	"Pre-reqs":["CIT 59X"],
 	"Quality":2.88,
 	"Workload":2.92,
-	"Tags":[]
+	"Tags":["Web"]
 },
 {
     "Code":"CIS 551",

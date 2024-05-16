@@ -1,652 +1,650 @@
-{
-  "Sheet1": [
-    {
-      "Name": "Ziqi (Grace) Hua",
-      "sde": 5,
-      "research": 2,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Zhitong Chen",
-      "sde": 5,
-      "research": 5,
-      " data science": 5,
-      "computer graphics": 4,
-      "UI/UX ": 3,
-      "project manager": 5
-    },
-    {
-      "Name": "Xinye Zhang",
-      "sde": 1,
-      "research": 3,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 3
-    },
-    {
-      "Name": "Marisol Sanchez",
-      "sde": 5,
-      "research": 0,
-      " data science": 5,
-      "computer graphics": 2,
-      "UI/UX ": 3,
-      "project manager": 3
-    },
-    {
-      "Name": "Lisa Ling",
-      "sde": 4,
-      "research": 0,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 4,
-      "project manager": 4
-    },
-    {
-      "Name": "Ganlin Ouyang",
-      "sde": 5,
-      "research": 0,
-      " data science": 0,
-      "computer graphics": 0,
-      "UI/UX ": 5,
-      "project manager": 5
-    },
-    {
-      "Name": "Tengxiao Song",
-      "sde": 5,
-      "research": 0,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 2
-    },
-    {
-      "Name": "YIHUAI ZHANG",
-      "sde": 5,
-      "research": 0,
-      " data science": 1,
-      "computer graphics": 3,
-      "UI/UX ": 1,
-      "project manager": 3
-    },
-    {
-      "Name": "Nollie(HuiYu) Chen",
-      "sde": 5,
-      "research": 0,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Sophie Wang",
-      "sde": 3,
-      "research": 0,
-      " data science": 2,
-      "computer graphics": 3,
-      "UI/UX ": 2,
-      "project manager": 5
-    },
-    {
-      "Name": "Joel Mandell",
-      "sde": 4,
-      "research": 0,
-      " data science": 1,
-      "computer graphics": 5,
-      "UI/UX ": 3,
-      "project manager": 1
-    },
-    {
-      "Name": "Nikita Singh",
-      "sde": 5,
-      "research": 0,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 3
-    },
-    {
-      "Name": "Robert Thomas Bunch",
-      "sde": 3,
-      "research": 0,
-      " data science": 0,
-      "computer graphics": 2,
-      "UI/UX ": 1,
-      "project manager": 4
-    },
-    {
-      "Name": "Chloe Benoit",
-      "sde": 2,
-      "research": 0,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 0
-    },
-    {
-      "Name": "Joshua Benadiva",
-      "sde": 5,
-      "research": 0,
-      " data science": 3,
-      "computer graphics": 0,
-      "UI/UX ": 3,
-      "project manager": 2
-    },
-    {
-      "Name": "Zairui Yang",
-      "sde": 5,
-      "research": 1,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Sharon Yu",
-      "sde": 5,
-      "research": 1,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 2,
-      "project manager": 3
-    },
-    {
-      "Name": "Austin Lin",
-      "sde": 4,
-      "research": 1,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 2,
-      "project manager": 1
-    },
-    {
-      "Name": "Jihan Chen",
-      "sde": 4,
-      "research": 1,
-      " data science": 4,
-      "computer graphics": 0,
-      "UI/UX ": 0,
-      "project manager": 5
-    },
-    {
-      "Name": "Haoyi Cheng",
-      "sde": 2,
-      "research": 1,
-      " data science": 3,
-      "computer graphics": 2,
-      "UI/UX ": 1,
-      "project manager": 2
-    },
-    {
-      "Name": "Shutong Jiang",
-      "sde": 4,
-      "research": 1,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 3,
-      "project manager": 3
-    },
-    {
-      "Name": "Yixuan Gao",
-      "sde": 4,
-      "research": 1,
-      " data science": 2,
-      "computer graphics": 3,
-      "UI/UX ": 5,
-      "project manager": 5
-    },
-    {
-      "Name": "Muhan Liu",
-      "sde": 3,
-      "research": 1,
-      " data science": 2,
-      "computer graphics": 4,
-      "UI/UX ": 5,
-      "project manager": 4
-    },
-    {
-      "Name": "haoyu zhao",
-      "sde": 3,
-      "research": 1,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 2,
-      "project manager": 5
-    },
-    {
-      "Name": "Katelyn Vo",
-      "sde": 3,
-      "research": 1,
-      " data science": 5,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 4
-    },
-    {
-      "Name": "Cynthia Zhou",
-      "sde": 4,
-      "research": 1,
-      " data science": 1,
-      "computer graphics": 4,
-      "UI/UX ": 5,
-      "project manager": 2
-    },
-    {
-      "Name": "Nico Tripeny",
-      "sde": 3,
-      "research": 1,
-      " data science": 4,
-      "computer graphics": 2,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Liya Zhang",
-      "sde": 4,
-      "research": 1,
-      " data science": 3,
-      "computer graphics": 3,
-      "UI/UX ": 4,
-      "project manager": 4
-    },
-    {
-      "Name": "Leyi Jiang",
-      "sde": 2,
-      "research": 1,
-      " data science": 2,
-      "computer graphics": 1,
-      "UI/UX ": 0,
-      "project manager": 5
-    },
-    {
-      "Name": "Hao Tan",
-      "sde": 5,
-      "research": 2,
-      " data science": 2,
-      "computer graphics": 4,
-      "UI/UX ": 4,
-      "project manager": 4
-    },
-    {
-      "Name": "Frida Spatscheck",
-      "sde": 4,
-      "research": 2,
-      " data science": 5,
-      "computer graphics": 3,
-      "UI/UX ": 1,
-      "project manager": 5
-    },
-    {
-      "Name": "Zhaoxuan Huang",
-      "sde": 5,
-      "research": 2,
-      " data science": 2,
-      "computer graphics": 2,
-      "UI/UX ": 3,
-      "project manager": 3
-    },
-    {
-      "Name": "Ana Bernal ",
-      "sde": 5,
-      "research": 2,
-      " data science": 3,
-      "computer graphics": 0,
-      "UI/UX ": 0,
-      "project manager": 3
-    },
-    {
-      "Name": "Rae Zhu",
-      "sde": 4,
-      "research": 2,
-      " data science": 4,
-      "computer graphics": 3,
-      "UI/UX ": 5,
-      "project manager": 3
-    },
-    {
-      "Name": "Justin Lu",
-      "sde": 4,
-      "research": 2,
-      " data science": 1,
-      "computer graphics": 3,
-      "UI/UX ": 4,
-      "project manager": 4
-    },
-    {
-      "Name": "Gabrielle Lyu",
-      "sde": 4,
-      "research": 2,
-      " data science": 2,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 0
-    },
-    {
-      "Name": "Huong Huynh",
-      "sde": 4,
-      "research": 2,
-      " data science": 2,
-      "computer graphics": 3,
-      "UI/UX ": 5,
-      "project manager": 5
-    },
-    {
-      "Name": "Abigail Zhong ",
-      "sde": 3,
-      "research": 2,
-      " data science": 3,
-      "computer graphics": 3,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Ijeoma Okoye",
-      "sde": 4,
-      "research": 2,
-      " data science": 1,
-      "computer graphics": 3,
-      "UI/UX ": 2,
-      "project manager": 2
-    },
-    {
-      "Name": "Xinran Zhu",
-      "sde": 4,
-      "research": 2,
-      " data science": 3,
-      "computer graphics": 4,
-      "UI/UX ": 2,
-      "project manager": 3
-    },
-    {
-      "Name": "James Chin",
-      "sde": 2,
-      "research": 2,
-      " data science": 4,
-      "computer graphics": 2,
-      "UI/UX ": 2,
-      "project manager": 5
-    },
-    {
-      "Name": "Alice Hobbs",
-      "sde": 2,
-      "research": 2,
-      " data science": 1,
-      "computer graphics": 2,
-      "UI/UX ": 3,
-      "project manager": 5
-    },
-    {
-      "Name": "Yuchen Liu",
-      "sde": 3,
-      "research": 2,
-      " data science": 5,
-      "computer graphics": 3,
-      "UI/UX ": 4,
-      "project manager": 5
-    },
-    {
-      "Name": "Ziyi Li",
-      "sde": 1,
-      "research": 2,
-      " data science": 5,
-      "computer graphics": 3,
-      "UI/UX ": 0,
-      "project manager": 4
-    },
-    {
-      "Name": "chenrui hu",
-      "sde": 2,
-      "research": 2,
-      " data science": 2,
-      "computer graphics": 2,
-      "UI/UX ": 2,
-      "project manager": 5
-    },
-    {
-      "Name": "Mikhael Zacharias Thomas",
-      "sde": 5,
-      "research": 3,
-      " data science": 4,
-      "computer graphics": 3,
-      "UI/UX ": 2,
-      "project manager": 2
-    },
-    {
-      "Name": "Ally Kim",
-      "sde": 5,
-      "research": 3,
-      " data science": 1,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 3
-    },
-    {
-      "Name": "Qingxuan Wu",
-      "sde": 5,
-      "research": 3,
-      " data science": 4,
-      "computer graphics": 3,
-      "UI/UX ": 0,
-      "project manager": 3
-    },
-    {
-      "Name": "Caroline Park",
-      "sde": 4,
-      "research": 3,
-      " data science": 1,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Xiaoying Zhang",
-      "sde": 3,
-      "research": 3,
-      " data science": 3,
-      "computer graphics": 3,
-      "UI/UX ": 3,
-      "project manager": 5
-    },
-    {
-      "Name": "McKenna Reale",
-      "sde": 3,
-      "research": 3,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 3,
-      "project manager": 2
-    },
-    {
-      "Name": "Amaal Abdi",
-      "sde": 2,
-      "research": 3,
-      " data science": 4,
-      "computer graphics": 2,
-      "UI/UX ": 2,
-      "project manager": 5
-    },
-    {
-      "Name": "Xinye Zhang",
-      "sde": 1,
-      "research": 3,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 3
-    },
-    {
-      "Name": "Andres Mondragon",
-      "sde": 4,
-      "research": 3,
-      " data science": 5,
-      "computer graphics": 0,
-      "UI/UX ": 0,
-      "project manager": 5
-    },
-    {
-      "Name": "Paul",
-      "sde": 4,
-      "research": 4,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Chimezie Maduno",
-      "sde": 5,
-      "research": 4,
-      " data science": 4,
-      "computer graphics": 3,
-      "UI/UX ": 2,
-      "project manager": 3
-    },
-    {
-      "Name": "Arpan Bagui",
-      "sde": 3,
-      "research": 4,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 3,
-      "project manager": 5
-    },
-    {
-      "Name": "Rubo Xing",
-      "sde": 5,
-      "research": 4,
-      " data science": 4,
-      "computer graphics": 4,
-      "UI/UX ": 4,
-      "project manager": 5
-    },
-    {
-      "Name": "Jason Su",
-      "sde": 4,
-      "research": 4,
-      " data science": 5,
-      "computer graphics": 5,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Muyu He",
-      "sde": 5,
-      "research": 4,
-      " data science": 2,
-      "computer graphics": 2,
-      "UI/UX ": 2,
-      "project manager": 4
-    },
-    {
-      "Name": "Thrisna Singh",
-      "sde": 2,
-      "research": 4,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Yucheng Zhu",
-      "sde": 3,
-      "research": 4,
-      " data science": 3,
-      "computer graphics": 3,
-      "UI/UX ": 3,
-      "project manager": 4
-    },
-    {
-      "Name": "Ji Hyun Kim",
-      "sde": 4,
-      "research": 4,
-      " data science": 1,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 4
-    },
-    {
-      "Name": "Perrie Quek",
-      "sde": 5,
-      "research": 4,
-      " data science": 2,
-      "computer graphics": 3,
-      "UI/UX ": 4,
-      "project manager": 1
-    },
-    {
-      "Name": "Andrew Zolensky",
-      "sde": 4,
-      "research": 4,
-      " data science": 4,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Jessie Levin",
-      "sde": 3,
-      "research": 4,
-      " data science": 2,
-      "computer graphics": 0,
-      "UI/UX ": 1,
-      "project manager": 1
-    },
-    {
-      "Name": "Rachel Feng",
-      "sde": 1,
-      "research": 5,
-      " data science": 3,
-      "computer graphics": 1,
-      "UI/UX ": 1,
-      "project manager": 5
-    },
-    {
-      "Name": "Nimisha Malik",
-      "sde": 5,
-      "research": 5,
-      " data science": 5,
-      "computer graphics": 1,
-      "UI/UX ": 0,
-      "project manager": 4
-    },
-    {
-      "Name": "JIANGMAN ZHAO",
-      "sde": 5,
-      "research": 5,
-      " data science": 4,
-      "computer graphics": 5,
-      "UI/UX ": 4,
-      "project manager": 3
-    },
-    {
-      "Name": "Chengpu Liao",
-      "sde": 5,
-      "research": 5,
-      " data science": 2,
-      "computer graphics": 2,
-      "UI/UX ": 4,
-      "project manager": 4
-    },
-    {
-      "Name": "Steve Wang",
-      "sde": 5,
-      "research": 5,
-      " data science": 0,
-      "computer graphics": 0,
-      "UI/UX ": 0,
-      "project manager": 0
-    },
-    {
-      "Name": "Tim Johnson",
-      "sde": 5,
-      "research": 0,
-      " data science": 0,
-      "computer graphics": 0,
-      "UI/UX ": 5,
-      "project manager": 5
-    }
-  ]
-}
+[
+  {
+    "Name": "Ziqi (Grace) Hua",
+    "sde": 5,
+    "research": 2,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Zhitong Chen",
+    "sde": 5,
+    "research": 5,
+    " data science": 5,
+    "computer graphics": 4,
+    "UI/UX ": 3,
+    "project manager": 5
+  },
+  {
+    "Name": "Xinye Zhang",
+    "sde": 1,
+    "research": 3,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 3
+  },
+  {
+    "Name": "Marisol Sanchez",
+    "sde": 5,
+    "research": 0,
+    " data science": 5,
+    "computer graphics": 2,
+    "UI/UX ": 3,
+    "project manager": 3
+  },
+  {
+    "Name": "Lisa Ling",
+    "sde": 4,
+    "research": 0,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 4,
+    "project manager": 4
+  },
+  {
+    "Name": "Ganlin Ouyang",
+    "sde": 5,
+    "research": 0,
+    " data science": 0,
+    "computer graphics": 0,
+    "UI/UX ": 5,
+    "project manager": 5
+  },
+  {
+    "Name": "Tengxiao Song",
+    "sde": 5,
+    "research": 0,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 2
+  },
+  {
+    "Name": "YIHUAI ZHANG",
+    "sde": 5,
+    "research": 0,
+    " data science": 1,
+    "computer graphics": 3,
+    "UI/UX ": 1,
+    "project manager": 3
+  },
+  {
+    "Name": "Nollie(HuiYu) Chen",
+    "sde": 5,
+    "research": 0,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Sophie Wang",
+    "sde": 3,
+    "research": 0,
+    " data science": 2,
+    "computer graphics": 3,
+    "UI/UX ": 2,
+    "project manager": 5
+  },
+  {
+    "Name": "Joel Mandell",
+    "sde": 4,
+    "research": 0,
+    " data science": 1,
+    "computer graphics": 5,
+    "UI/UX ": 3,
+    "project manager": 1
+  },
+  {
+    "Name": "Nikita Singh",
+    "sde": 5,
+    "research": 0,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 3
+  },
+  {
+    "Name": "Robert Thomas Bunch",
+    "sde": 3,
+    "research": 0,
+    " data science": 0,
+    "computer graphics": 2,
+    "UI/UX ": 1,
+    "project manager": 4
+  },
+  {
+    "Name": "Chloe Benoit",
+    "sde": 2,
+    "research": 0,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 0
+  },
+  {
+    "Name": "Joshua Benadiva",
+    "sde": 5,
+    "research": 0,
+    " data science": 3,
+    "computer graphics": 0,
+    "UI/UX ": 3,
+    "project manager": 2
+  },
+  {
+    "Name": "Zairui Yang",
+    "sde": 5,
+    "research": 1,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Sharon Yu",
+    "sde": 5,
+    "research": 1,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 2,
+    "project manager": 3
+  },
+  {
+    "Name": "Austin Lin",
+    "sde": 4,
+    "research": 1,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 2,
+    "project manager": 1
+  },
+  {
+    "Name": "Jihan Chen",
+    "sde": 4,
+    "research": 1,
+    " data science": 4,
+    "computer graphics": 0,
+    "UI/UX ": 0,
+    "project manager": 5
+  },
+  {
+    "Name": "Haoyi Cheng",
+    "sde": 2,
+    "research": 1,
+    " data science": 3,
+    "computer graphics": 2,
+    "UI/UX ": 1,
+    "project manager": 2
+  },
+  {
+    "Name": "Shutong Jiang",
+    "sde": 4,
+    "research": 1,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 3,
+    "project manager": 3
+  },
+  {
+    "Name": "Yixuan Gao",
+    "sde": 4,
+    "research": 1,
+    " data science": 2,
+    "computer graphics": 3,
+    "UI/UX ": 5,
+    "project manager": 5
+  },
+  {
+    "Name": "Muhan Liu",
+    "sde": 3,
+    "research": 1,
+    " data science": 2,
+    "computer graphics": 4,
+    "UI/UX ": 5,
+    "project manager": 4
+  },
+  {
+    "Name": "haoyu zhao",
+    "sde": 3,
+    "research": 1,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 2,
+    "project manager": 5
+  },
+  {
+    "Name": "Katelyn Vo",
+    "sde": 3,
+    "research": 1,
+    " data science": 5,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 4
+  },
+  {
+    "Name": "Cynthia Zhou",
+    "sde": 4,
+    "research": 1,
+    " data science": 1,
+    "computer graphics": 4,
+    "UI/UX ": 5,
+    "project manager": 2
+  },
+  {
+    "Name": "Nico Tripeny",
+    "sde": 3,
+    "research": 1,
+    " data science": 4,
+    "computer graphics": 2,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Liya Zhang",
+    "sde": 4,
+    "research": 1,
+    " data science": 3,
+    "computer graphics": 3,
+    "UI/UX ": 4,
+    "project manager": 4
+  },
+  {
+    "Name": "Leyi Jiang",
+    "sde": 2,
+    "research": 1,
+    " data science": 2,
+    "computer graphics": 1,
+    "UI/UX ": 0,
+    "project manager": 5
+  },
+  {
+    "Name": "Hao Tan",
+    "sde": 5,
+    "research": 2,
+    " data science": 2,
+    "computer graphics": 4,
+    "UI/UX ": 4,
+    "project manager": 4
+  },
+  {
+    "Name": "Frida Spatscheck",
+    "sde": 4,
+    "research": 2,
+    " data science": 5,
+    "computer graphics": 3,
+    "UI/UX ": 1,
+    "project manager": 5
+  },
+  {
+    "Name": "Zhaoxuan Huang",
+    "sde": 5,
+    "research": 2,
+    " data science": 2,
+    "computer graphics": 2,
+    "UI/UX ": 3,
+    "project manager": 3
+  },
+  {
+    "Name": "Ana Bernal ",
+    "sde": 5,
+    "research": 2,
+    " data science": 3,
+    "computer graphics": 0,
+    "UI/UX ": 0,
+    "project manager": 3
+  },
+  {
+    "Name": "Rae Zhu",
+    "sde": 4,
+    "research": 2,
+    " data science": 4,
+    "computer graphics": 3,
+    "UI/UX ": 5,
+    "project manager": 3
+  },
+  {
+    "Name": "Justin Lu",
+    "sde": 4,
+    "research": 2,
+    " data science": 1,
+    "computer graphics": 3,
+    "UI/UX ": 4,
+    "project manager": 4
+  },
+  {
+    "Name": "Gabrielle Lyu",
+    "sde": 4,
+    "research": 2,
+    " data science": 2,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 0
+  },
+  {
+    "Name": "Huong Huynh",
+    "sde": 4,
+    "research": 2,
+    " data science": 2,
+    "computer graphics": 3,
+    "UI/UX ": 5,
+    "project manager": 5
+  },
+  {
+    "Name": "Abigail Zhong ",
+    "sde": 3,
+    "research": 2,
+    " data science": 3,
+    "computer graphics": 3,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Ijeoma Okoye",
+    "sde": 4,
+    "research": 2,
+    " data science": 1,
+    "computer graphics": 3,
+    "UI/UX ": 2,
+    "project manager": 2
+  },
+  {
+    "Name": "Xinran Zhu",
+    "sde": 4,
+    "research": 2,
+    " data science": 3,
+    "computer graphics": 4,
+    "UI/UX ": 2,
+    "project manager": 3
+  },
+  {
+    "Name": "James Chin",
+    "sde": 2,
+    "research": 2,
+    " data science": 4,
+    "computer graphics": 2,
+    "UI/UX ": 2,
+    "project manager": 5
+  },
+  {
+    "Name": "Alice Hobbs",
+    "sde": 2,
+    "research": 2,
+    " data science": 1,
+    "computer graphics": 2,
+    "UI/UX ": 3,
+    "project manager": 5
+  },
+  {
+    "Name": "Yuchen Liu",
+    "sde": 3,
+    "research": 2,
+    " data science": 5,
+    "computer graphics": 3,
+    "UI/UX ": 4,
+    "project manager": 5
+  },
+  {
+    "Name": "Ziyi Li",
+    "sde": 1,
+    "research": 2,
+    " data science": 5,
+    "computer graphics": 3,
+    "UI/UX ": 0,
+    "project manager": 4
+  },
+  {
+    "Name": "chenrui hu",
+    "sde": 2,
+    "research": 2,
+    " data science": 2,
+    "computer graphics": 2,
+    "UI/UX ": 2,
+    "project manager": 5
+  },
+  {
+    "Name": "Mikhael Zacharias Thomas",
+    "sde": 5,
+    "research": 3,
+    " data science": 4,
+    "computer graphics": 3,
+    "UI/UX ": 2,
+    "project manager": 2
+  },
+  {
+    "Name": "Ally Kim",
+    "sde": 5,
+    "research": 3,
+    " data science": 1,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 3
+  },
+  {
+    "Name": "Qingxuan Wu",
+    "sde": 5,
+    "research": 3,
+    " data science": 4,
+    "computer graphics": 3,
+    "UI/UX ": 0,
+    "project manager": 3
+  },
+  {
+    "Name": "Caroline Park",
+    "sde": 4,
+    "research": 3,
+    " data science": 1,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Xiaoying Zhang",
+    "sde": 3,
+    "research": 3,
+    " data science": 3,
+    "computer graphics": 3,
+    "UI/UX ": 3,
+    "project manager": 5
+  },
+  {
+    "Name": "McKenna Reale",
+    "sde": 3,
+    "research": 3,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 3,
+    "project manager": 2
+  },
+  {
+    "Name": "Amaal Abdi",
+    "sde": 2,
+    "research": 3,
+    " data science": 4,
+    "computer graphics": 2,
+    "UI/UX ": 2,
+    "project manager": 5
+  },
+  {
+    "Name": "Xinye Zhang",
+    "sde": 1,
+    "research": 3,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 3
+  },
+  {
+    "Name": "Andres Mondragon",
+    "sde": 4,
+    "research": 3,
+    " data science": 5,
+    "computer graphics": 0,
+    "UI/UX ": 0,
+    "project manager": 5
+  },
+  {
+    "Name": "Paul",
+    "sde": 4,
+    "research": 4,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Chimezie Maduno",
+    "sde": 5,
+    "research": 4,
+    " data science": 4,
+    "computer graphics": 3,
+    "UI/UX ": 2,
+    "project manager": 3
+  },
+  {
+    "Name": "Arpan Bagui",
+    "sde": 3,
+    "research": 4,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 3,
+    "project manager": 5
+  },
+  {
+    "Name": "Rubo Xing",
+    "sde": 5,
+    "research": 4,
+    " data science": 4,
+    "computer graphics": 4,
+    "UI/UX ": 4,
+    "project manager": 5
+  },
+  {
+    "Name": "Jason Su",
+    "sde": 4,
+    "research": 4,
+    " data science": 5,
+    "computer graphics": 5,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Muyu He",
+    "sde": 5,
+    "research": 4,
+    " data science": 2,
+    "computer graphics": 2,
+    "UI/UX ": 2,
+    "project manager": 4
+  },
+  {
+    "Name": "Thrisna Singh",
+    "sde": 2,
+    "research": 4,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Yucheng Zhu",
+    "sde": 3,
+    "research": 4,
+    " data science": 3,
+    "computer graphics": 3,
+    "UI/UX ": 3,
+    "project manager": 4
+  },
+  {
+    "Name": "Ji Hyun Kim",
+    "sde": 4,
+    "research": 4,
+    " data science": 1,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 4
+  },
+  {
+    "Name": "Perrie Quek",
+    "sde": 5,
+    "research": 4,
+    " data science": 2,
+    "computer graphics": 3,
+    "UI/UX ": 4,
+    "project manager": 1
+  },
+  {
+    "Name": "Andrew Zolensky",
+    "sde": 4,
+    "research": 4,
+    " data science": 4,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Jessie Levin",
+    "sde": 3,
+    "research": 4,
+    " data science": 2,
+    "computer graphics": 0,
+    "UI/UX ": 1,
+    "project manager": 1
+  },
+  {
+    "Name": "Rachel Feng",
+    "sde": 1,
+    "research": 5,
+    " data science": 3,
+    "computer graphics": 1,
+    "UI/UX ": 1,
+    "project manager": 5
+  },
+  {
+    "Name": "Nimisha Malik",
+    "sde": 5,
+    "research": 5,
+    " data science": 5,
+    "computer graphics": 1,
+    "UI/UX ": 0,
+    "project manager": 4
+  },
+  {
+    "Name": "JIANGMAN ZHAO",
+    "sde": 5,
+    "research": 5,
+    " data science": 4,
+    "computer graphics": 5,
+    "UI/UX ": 4,
+    "project manager": 3
+  },
+  {
+    "Name": "Chengpu Liao",
+    "sde": 5,
+    "research": 5,
+    " data science": 2,
+    "computer graphics": 2,
+    "UI/UX ": 4,
+    "project manager": 4
+  },
+  {
+    "Name": "Steve Wang",
+    "sde": 5,
+    "research": 5,
+    " data science": 0,
+    "computer graphics": 0,
+    "UI/UX ": 0,
+    "project manager": 0
+  },
+  {
+    "Name": "Tim Johnson",
+    "sde": 5,
+    "research": 0,
+    " data science": 0,
+    "computer graphics": 0,
+    "UI/UX ": 5,
+    "project manager": 5
+  }
+]
