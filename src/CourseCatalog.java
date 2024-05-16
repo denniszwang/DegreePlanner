@@ -21,7 +21,7 @@ public class CourseCatalog {
     private CourseGraph courseGraph;
     private CourseNode courseRoot;
     private final int numElectives = 4;
-    private int courseCount = 0;
+    private int cisCourseCount = 0;
 
     public CourseCatalog() {
         this.cisFilePath = "./data/CIS.json";
@@ -349,23 +349,49 @@ public class CourseCatalog {
         }
     }
 
-    public void addCourseToCart(String courseCode) {
+    public boolean allowToCart(String courseCode) {
+        courseCode = courseCode.toUpperCase();
+        if (courseCart.size() >= 4) {
+            System.out.println("You have reached the maximum number of courses in your cart.");
+            return false;
+        }
+        if (courseCart.size() - cisCourseCount > 0 && !isCISElective(courseCode)) {
+            System.out.println("You can only add 1 non-CIS courses to your cart.");
+            return false;
+        }
+        for (Course c : courseCart) {
+            if (c.getCode().equals(courseCode)) {
+                System.out.println(c + " already in cart.");
+                return false;
+            }
+        }
         String name = courseMap.get(courseCode);
         if (name == null) {
             System.out.println("Course not found in catalog.");
-            return;
+            return false;
         }
+        return true;
+    }
+
+    public void addCourseToCart(String courseCode) {
+        courseCode = courseCode.toUpperCase();
+        String name = courseMap.get(courseCode);
         Course course = new Course(courseCode, name);
         courseCart.add(course);
-        courseCount++;
+        if (isCISElective(courseCode)) {
+            cisCourseCount++;
+        }
         System.out.println(course + " has been added to your cart.");
     }
 
     public void removeCourseFromCart(String courseCode) {
+        courseCode = courseCode.toUpperCase();
         for (Course course : courseCart) {
             if (course.getCode().equals(courseCode)) {
                 courseCart.remove(course);
-                courseCount--;
+                if (isCISElective(courseCode)) {
+                    cisCourseCount--;
+                }
                 System.out.println(courseCode + " has been removed from your cart.");
                 return;
             }
@@ -382,16 +408,16 @@ public class CourseCatalog {
 
     public void clearCart() {
         courseCart.clear();
-        courseCount = 0;
+        cisCourseCount = 0;
         System.out.println("Your cart has been cleared.");
     }
 
-    public boolean isCISElective(String courseCode) {
-        return cisCourseCodes.contains(courseCode);
+    public int getCourseCartSize() {
+        return courseCart.size();
     }
 
-    public int getCourseCount() {
-        return courseCount;
+    private boolean isCISElective(String courseCode) {
+        return cisCourseCodes.contains(courseCode);
     }
 
 }

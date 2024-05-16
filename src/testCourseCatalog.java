@@ -55,11 +55,15 @@ public class testCourseCatalog {
         cc.removeCourseFromCart("CIS 557");
         cc.addCourseToCart("EAS 512");
         cc.displayCart();
-        assertEquals(4, cc.getCourseCount());
+        assertEquals(4, cc.getCourseCartSize());
         cc.clearCart();
-        assertEquals(0, cc.getCourseCount());
-        assertTrue(cc.isCISElective("CIS 550"));
-        assertFalse(cc.isCISElective("CIS"));
-        assertFalse(cc.isCISElective("EAS 512"));
+        assertEquals(0, cc.getCourseCartSize());
+        cc.addCourseToCart("CIS 550");
+        assertTrue(cc.allowToCart("CIS 557"));
+        cc.addCourseToCart("CIS 557");
+        assertFalse(cc.allowToCart("CIS 557"));
+        cc.addCourseToCart("EAS 512");
+        assertFalse(cc.allowToCart("EAS 590"));
+        assertTrue(cc.allowToCart("CIS 573"));
     }
 }

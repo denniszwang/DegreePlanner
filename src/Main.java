@@ -32,26 +32,54 @@ public class Main {
                         }
                     }
                     break;
+
                 case 2:
                     // Search for Non-CIS courses
                     quit = false;
+                    scanner.nextLine();
                     while (!quit) {
                         System.out.println("Please enter a search term:");
                         System.out.println("You can search by department code, course code or course name");
-                        String search = scanner.next();
+                        String search = scanner.nextLine();
                         courseCatalog.searchApprovedElective(search);
                         System.out.println("Do you want to search again? (y/n)");
-                        String response = scanner.next();
+                        String response = scanner.nextLine();
                         if (response.equals("n")) {
                             quit = true;
                         }
                     }
                     break;
+
                 case 3:
+                    // Make course cart
+                    quit = false;
+                    scanner.nextLine();
+                    makeCart(courseCatalog);
+
+                    while (!quit) {
+                        courseCatalog.displayCart();
+                        System.out.println();
+                        System.out.println("Do you want to modify your cart? (y/n)");
+                        String response = scanner.nextLine();
+                        if (response.equals("y")) {
+                            System.out.println("Please enter a course code to remove from your cart:");
+                            String courseCode = scanner.nextLine();
+                            courseCatalog.removeCourseFromCart(courseCode);
+                            makeCart(courseCatalog);
+                        }
+                        if (response.equals("n")) {
+                            courseCatalog.displayCart();
+                            quit = true;
+                        }
+                    }
+                    break;
+
+                case 4:
                     // Pair with a mentor
 
                     break;
-                case 4:
+
+                case 5:
                     // Exit
                     System.out.println("Thanks for using!");
                     isRunning = false;
@@ -60,12 +88,27 @@ public class Main {
 
     }
 
+    private void makeCart(CourseCatalog courseCatalog) {
+        int cartSize = courseCatalog.getCourseCartSize();
+        while (cartSize < 4) {
+            int dif = 4 - cartSize;
+            System.out.println("You need to add " + dif + " more courses to your cart.");
+            System.out.println("Please enter a course code to add to your cart:");
+            String courseCode = scanner.nextLine();
+            if (courseCatalog.allowToCart(courseCode)) {
+                courseCatalog.addCourseToCart(courseCode);
+                cartSize++;
+            }
+        }
+    }
+
     private void optionPrompt() {
         System.out.println("Please select an option:");
         System.out.println("1. Get suggested CIS courses");
         System.out.println("2. Search for Non-CIS courses");
-        System.out.println("3. Pair with a mentor");
-        System.out.println("4. Exit\n");
+        System.out.println("3. Modify course cart");
+        System.out.println("4. Pair with a mentor");
+        System.out.println("5. Exit\n");
     }
 
     private int readIntegerInput() {
@@ -77,7 +120,7 @@ public class Main {
                 isValidInput = true;
             } catch (InputMismatchException e) {
                 scanner.nextLine();
-                System.out.println("Invalid input. Please enter a valid option (1 - 4).");
+                System.out.println("Invalid input. Please enter a valid option (1 - 5).");
             }
         }
         return option;
