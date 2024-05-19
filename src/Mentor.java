@@ -24,5 +24,5 @@ public class Mentor {
     public int[] getScores() {
         return this.scores;
     }
-    
+
 }

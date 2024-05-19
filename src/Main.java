@@ -82,7 +82,10 @@ public class Main {
                         System.out.println("Please enter your Name to match a mentor:");
                         String name = scanner.nextLine();
                         int[] interestScores = courseCatalog.convertToInterestScores();
-
+                        MentorMatching mentorMatching = new MentorMatching();
+                        Mentor mentor = mentorMatching.findBestMatch(interestScores);
+                        System.out.println("The best mentor for you is: " + mentor.getName());
+                        quit = true;
                     }
                     break;
 
