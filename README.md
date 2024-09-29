@@ -13,7 +13,4 @@
 
 4. **AI-Based Mentor Matching**:
     - **Matching Algorithm:** Utilize  Gale-Shapley algorithm to match users with mentors based on their interests and the mentor's background.
-    - **Mentor Retrival:** Implement B+ tree to get corresponding mentor information based on user's interest.
-
-5. **GUI for the curriculum planner**
-   - ** A GUI interface for the curriculum planner that allows users to interact with all the above features in a user-friendly manner.
+    - **Mentor Retrival:** Implement B+ tree to get corresponding mentor information based on user's interest
